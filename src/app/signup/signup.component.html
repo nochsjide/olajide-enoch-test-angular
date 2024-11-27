@@ -1,0 +1,22 @@
+<p>signup works!</p>
+<div class="container">
+    <div class="col-6">
+        <input type="text" class="form-control my-2" placeholder="Enter first name" name="fname" [(ngModel)]="firstname">
+        <input type="text" class="form-control my-2" placeholder="Enter last name" name="lname" [(ngModel)]="lastname">
+        <input type="text" class="form-control my-2" placeholder="Enter email" name="email" [(ngModel)]="email">
+        <p class="text-danger">{{msg}}</p>
+        <input type="password" class="form-control my-2" placeholder="Enter password" name="pass" [(ngModel)]="password">
+        <input type="text" class="form-control my-2" placeholder="Enter phonenumber" name="pnumber" [(ngModel)]="phonenumber">
+        <input type="text" class="form-control my-2" placeholder="Enter age" name="age" [(ngModel)]="age">
+        <select name="accountype" id="" [(ngModel)]="accountype" >Account type
+        <option value="">Choose Account type</option>  
+        <option value="">Savings</option> 
+        <option value="">Current</option>
+        <option value="">Fixed</option>  
+        </select> 
+        <input type="text" class="form-control my-2" placeholder="Enter next of kin name" name="nname" [(ngModel)]="nname">
+        <input type="text" class="form-control my-2" placeholder="Enter next of kin phonenumber" name="npnumber" [(ngModel)]="npnumber">
+        <button class="btn btn-primary" (click)="signup()">submit</button>
+    </div>
+
+</div>
