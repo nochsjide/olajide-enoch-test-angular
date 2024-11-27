@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-signup',
@@ -24,11 +25,12 @@ export class SignupComponent {
   
 ngOnInit()
 {
-  localStorage.setItem('usersarray','[]');
-  const storedUsers= JSON.parse(localStorage.getItem('userarray')!)
-  this.users = storedUsers ? JSON.parse(localStorage.getItem('userarray')!):[]
+ 
+  const storedUsers= JSON.parse(localStorage.getItem('usersarray')!)
+  this.users = storedUsers ? JSON.parse(localStorage.getItem('usersarray')!):[]
 
 }
+constructor(public router:Router){}
   signup()
   {
    
@@ -50,10 +52,11 @@ ngOnInit()
             age:this.age,
             nname:this.nname,
             npnumber:this.npnumber,
-            user_id:"US" + Math.random()*10000000,
-            accountnumber:Math.random()*1000000000,
+            user_id:"US" + Math.floor(Math.random()*10000000),
+            accountnumber: Math.floor(Math.random()*10000000),
             accountype:this.accountype,
-            balance:0.00
+            balance:0.00,
+            PIN:'0000'
 
 
           }
@@ -61,6 +64,7 @@ ngOnInit()
           console.log(user)
           localStorage.setItem('usersarray',JSON.stringify(this.users))
           console.log(this.users)
+          this.router.navigate(['signin'])
 
       }
 

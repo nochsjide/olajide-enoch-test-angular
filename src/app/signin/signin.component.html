@@ -1,0 +1,11 @@
+<div class="container">
+    <div class="col-6">
+     
+        <input type="text" class="form-control my-2" placeholder="Enter email" name="email" [(ngModel)]="email">
+        
+        <input type="password" class="form-control my-2" placeholder="Enter password" name="pass" [(ngModel)]="password">
+        <p class="text-danger">{{msg}}</p>        
+        <button class="btn btn-primary" (click)="signin()">signin</button>
+    </div>
+
+</div>
