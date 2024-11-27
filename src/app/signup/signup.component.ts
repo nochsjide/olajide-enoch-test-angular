@@ -50,8 +50,8 @@ ngOnInit()
             age:this.age,
             nname:this.nname,
             npnumber:this.npnumber,
-            user_id:"US" + Math.random(),
-            accountnumber:Math.random()*10,
+            user_id:"US" + Math.random()*10000000,
+            accountnumber:Math.random()*1000000000,
             accountype:this.accountype,
             balance:0.00
 
